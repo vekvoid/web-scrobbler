@@ -9,8 +9,8 @@
 Connector.playerSelector = '.now-playing-bar';
 
 Connector.getArtist = function () {
-	let artists = $('.track-info__artists a').toArray();
-	return Util.joinArtists(artists);
+	let artists = $('.track-info__artists a').first();
+	return artists.text();
 };
 
 Connector.trackSelector = '.track-info__name a';
